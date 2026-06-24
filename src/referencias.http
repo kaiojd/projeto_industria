@@ -1,0 +1,11 @@
+###
+
+GET http://localhost:3000/alunos
+
+###
+
+POST http://localhost:3000/alunos
+
+###
+
+GET http://localhost:3000/alunos/1
