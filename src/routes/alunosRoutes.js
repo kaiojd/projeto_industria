@@ -2,24 +2,12 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/alunos", (req, res) => {
-    res.status(200).json({
-        mensagem: "Lista de alunos"
-    });
-});
+const alunosController = require("../controllers/alunosController");
 
-router.post("/alunos", (req, res) => {
-    res.status(201).json({
-        mensagem: "Aluno cadastrado com sucesso"
-    });
-});
+router.get("/alunos", alunosController.listarAlunos);
 
-router.get("/alunos/:id", (req, res) => {
-    const id = req.params.id;
+router.post("/alunos", alunosController.criarAluno);
 
-    res.status(200).json({
-        mensagem: `Aluno encontrado com id ${id}`
-    });
-});
+router.get("/alunos/:id", alunosController.buscarAluno);
 
 module.exports = router;
