@@ -2,10 +2,12 @@ const prisma = require('../prisma');
 
 exports.criarAluno = async (req, res) => {
     try {
-        const { nome, email } = req.body;
+
+
+        const { nome, email, turma } = req.body;
 
         const aluno = await prisma.aluno.create({
-            data: { nome, email }
+            data: { nome, email, turma }
         });
 
         return res.status(201).json(aluno);

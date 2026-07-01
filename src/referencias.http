@@ -4,8 +4,8 @@ Content-Type: application/json
 
 {
     "nome": "Kaio",
-    "turma": "3º Ano",
-    "idade": 17
+    "email": "kaiodilli@gmail.com",
+    "turma": "3º Ano"
 }
 
 ###

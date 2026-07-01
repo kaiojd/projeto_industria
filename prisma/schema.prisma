@@ -4,12 +4,12 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("postgresql://postgres:senai@localhost:5432/projeto_industria")
+  url      = env("DATABASE_URL")
 }
 
 model Aluno {
-  id     Int    @id @default(autoincrement())
-  nome   String
-  turma  String
-  idade  Int
+  id    Int    @id @default(autoincrement())
+  nome  String
+  turma String @unique
+  email String
 }
